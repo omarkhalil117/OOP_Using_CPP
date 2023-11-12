@@ -150,5 +150,7 @@ int main()
     c3 = --c3;
     c3.print();
 
+    cout << "Equality Between c1 , c2 = " << (c1 == c2) << endl;
+
     return 0;
 }
