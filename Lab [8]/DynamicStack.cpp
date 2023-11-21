@@ -43,7 +43,7 @@ public:
         if (t == this->S - 1)
         {
             T *temp = new T[S * 2];
-            for (int i = 0; i < t; i++)
+            for (int i = 0; i <= t; i++)
             {
                 temp[i] = arr[i];
             }
@@ -90,7 +90,7 @@ public:
 
 int main()
 {
-    float c = 0;
+
     Stack<float> s(3);
 
     s.push(1.25);
@@ -100,14 +100,9 @@ int main()
     s.push(12.25);
     s.push(14.65);
 
-    c = s.pop();
-    cout << "Popped : " << c << endl;
-    cout << "Function Start." << endl;
-    cout << "Function End." << endl;
-    c = s.pop();
-    cout << "Popped : " << c << endl;
-    c = s.pop();
-    cout << "Popped : " << c << endl;
+    cout << "Popped : " << s.pop() << endl;
+    cout << "Popped : " << s.pop() << endl;
+    cout << "Popped : " << s.pop() << endl;
     s.printStack();
 
     return 0;
