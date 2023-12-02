@@ -24,12 +24,14 @@ public:
     {
         t = s.t;
         S = s.S;
-        delete[] arr;
-        arr = new int[S];
+        
+        int *temp = new int[S];
         for (int i = 0; i < S; i++)
         {
-            arr[i] = s.arr[i];
+            temp[i] = s.arr[i];
         }
+        arr = temp ;
+        cout<<"Copy"<<endl;
     }
 
     ~Stack()
@@ -89,19 +91,13 @@ int main()
     s.push(1);
     s.push(2);
     // s.push(3);
-
+    Stack s2 = s;
+   
+    s.printStack();
+    s2.push(5);
+    s2.printStack();
     // s.printStack();
 
-    c = s.pop();
-    cout << "Popped : " << c << endl;
-    cout << "Function Start." << endl;
-    function(s);
-    cout << "Function End." << endl;
-    c = s.pop();
-    cout << "Popped : " << c << endl;
-    c = s.pop();
-    cout << "Popped : " << c << endl;
-    s.printStack();
 
     return 0;
 }
