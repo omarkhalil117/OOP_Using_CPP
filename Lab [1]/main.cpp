@@ -40,21 +40,21 @@ class Complex
          }
      }
 
-     Complex add(Complex c1 , Complex c2)
-     {
-         Complex c3 ;
-         c3.setReal(c1.getReal() + c2.getReal());
-         c3.setImag(c1.getImag() + c2.getImag());
-         return c3;
-     }
+    Complex add(Complex c)
+    {
+        Complex res;
+        res.setReal(this->real + c.getReal());
+        res.setImag(this->imag + c.getImag());
+        return res;
+    }
 
-     Complex sub(Complex c1 , Complex c2)
-     {
-         Complex c3 ;
-         c3.setReal(c1.getReal() - c2.getReal());
-         c3.setImag(c1.getImag() - c2.getImag());
-         return c3;
-     }
+    Complex sub(Complex c)
+    {
+        Complex res;
+        res.setReal(this->real - c.getReal());
+        res.setImag(this->imag - c.getImag());
+        return res;
+    }
 
 
 
@@ -98,11 +98,11 @@ int main()
     Complex c3 ;
 
     cout<<"Add From class:"<<endl;
-    c3 = c1.add(c1,c2);     // Add c1,c2
+    c3 = c1.add(c2);     // Add c1,c2
     c3.print();     // prinf Addition c3
 
     cout<<"Sub From class:"<<endl;
-    c3 = c1.sub(c1,c2);     // Sub c1,c2
+    c3 = c1.sub(c2);     // Sub c1,c2
     c3.print();     // prinf Addition c3
 
 

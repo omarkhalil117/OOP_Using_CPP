@@ -44,20 +44,20 @@ public:
         }
     }
 
-    Complex add(Complex c1, Complex c2)
+    Complex add(Complex c)
     {
-        Complex c3;
-        c3.setReal(c1.getReal() + c2.getReal());
-        c3.setImag(c1.getImag() + c2.getImag());
-        return c3;
+        Complex res;
+        res.setReal(this->real + c.getReal());
+        res.setImag(this->imag + c.getImag());
+        return res;
     }
 
-    Complex sub(Complex c1, Complex c2)
+    Complex sub(Complex c)
     {
-        Complex c3;
-        c3.setReal(c1.getReal() - c2.getReal());
-        c3.setImag(c1.getImag() - c2.getImag());
-        return c3;
+        Complex res;
+        res.setReal(this->real - c.getReal());
+        res.setImag(this->imag - c.getImag());
+        return res;
     }
 
     Complex operator+(Complex &c)
