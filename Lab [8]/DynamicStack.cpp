@@ -50,6 +50,8 @@ public:
             S = S * 2;
             delete[] arr;
             arr = temp;
+			t++;
+			arr[t] = x ;
             cout << "Extended !!" << endl;
             // cout << "Sorry the stack is full" << endl;
         }
